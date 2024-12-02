@@ -9,11 +9,14 @@ const str = `mongodb+srv://darsh2510:${ps}@project.wt9x4.mongodb.net/?retryWrite
 const hostel_router = require("./routers/hostel.js");
 const scholar_router = require("./routers/scholar.js");
 const join_router = require("./routers/join.js");
+const register_router = require("./routers/register.js");
+
 app.use(express.static("./public"));
 app.use(express.json());
 app.use("/api/hostel",hostel_router);
 app.use("/api/scholarship",scholar_router);
 app.use("/api/joinUs",join_router);
+app.use("/api/register",register_router);
 async function start(){
     try{
         await coonectDB(str);

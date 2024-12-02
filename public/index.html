@@ -130,7 +130,7 @@
         <!-- Group for See All Section -->
         <div class="button-group">
             <button class="tab-button" onclick="fetchDetails('scholarship')">See All Scholarships</button>
-            <button class="tab-button" onclick="fetchDetails('users')">See All Users</button>
+            <button class="tab-button" onclick="fetchDetails('register')">See All Users</button>
             <button class="tab-button" onclick="fetchDetails('hostel')">See All Hostels</button>
             <button class="tab-button" onclick="fetchDetails('joinUs')">See All Volunteers</button>
         </div>
@@ -181,9 +181,9 @@
                const itemDiv = document.createElement('div');
                itemDiv.className = 'record-item';
 
-               if (type === 'users') {
+               if (type === 'register') {
                    itemDiv.innerHTML = `
-                       <strong style="color:white;">Name : ${item.name}</strong> 
+                       <strong style="color:white;">Name : ${item.username}</strong> 
                        <strong style="color:white;">Email : (${item.email})</strong> 
                        <button class="delete-btn" onclick="deleteItem('${type}','${item._id}')"><i class="fas fa-trash-alt"></i></button>
                    `;
